@@ -39,7 +39,7 @@ export default function Board() {
     if (winner) {
       setGameStatus("Winner: " + winner);
     } else {
-      setGameStatus("Next player: " + (xIsNext ? "X" : "O"));
+      setGameStatus("You're up, " + (!xIsNext ? "X" : "O") + "!");
     }
   }
 
