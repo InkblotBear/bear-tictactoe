@@ -5,7 +5,7 @@ import "./App.css";
 
 interface SquareProps {
   value: string | null;
-  onSquareClick: any;
+  onSquareClick: () => void;
 }
 
 function Square({ value, onSquareClick }: SquareProps) {
@@ -23,7 +23,7 @@ export default function Board() {
   const [xIsNext, setXIsNext] = useState(true);
   const [gameStatus, setGameStatus] = useState<string | null>(null);
 
-  function handleClick(i: any) {
+  function handleClick(i: number) {
     if (squares[i] || calculateWinner(squares)) {
       return;
     }
